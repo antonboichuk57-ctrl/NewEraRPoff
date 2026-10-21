@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NewEra — лучший РП-сервер Minecraft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9;--surface:#fff;--soft:#eceff4;--ink:#0e1626;--muted:#566178;--line:#dde2ea;
+  --sun:#ff8a1f;--sun-text:#b9500a;--navy:#0c1830;--alert:#c0222b;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0a1020;--surface:#131b30;--soft:#1a2440;--ink:#eef1f8;--muted:#9aa5bf;--line:#26314d;--sun-text:#ff9a3d;--alert:#ff8a8a}
+}
+:root[data-theme="dark"]{--bg:#0a1020;--surface:#131b30;--soft:#1a2440;--ink:#eef1f8;--muted:#9aa5bf;--line:#26314d;--sun-text:#ff9a3d;--alert:#ff8a8a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Onest,system-ui,sans-serif}
+h1,h2,.num,.ip b{font-family:Unbounded,Onest,system-ui,sans-serif}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+
+.hero{position:relative;overflow:hidden;background:var(--navy);color:#fff;text-align:center;padding:96px 1.25rem 300px}
+h1{margin:0;font-weight:800;font-size:clamp(3rem,13vw,8rem);line-height:.95;letter-spacing:-.045em}
+.hero p{margin:1.1rem 0 2rem;font-size:clamp(1.05rem,2.6vw,1.35rem);color:#b9c4dd}
+.cta{display:inline-block;padding:.9rem 1.7rem;border-radius:999px;background:var(--sun);color:#1a1206;font-weight:700;text-decoration:none}
+.hero .cta,.hero p,.hero h1{position:relative;z-index:1}
+.sun{position:absolute;left:50%;bottom:-280px;width:520px;height:520px;margin-left:-260px;border-radius:50%;background:var(--sun);
+  box-shadow:0 0 0 28px rgba(255,138,31,.2),0 0 0 64px rgba(255,138,31,.09);animation:rise 1.6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(300px)}to{transform:none}}
+
+.wrap{max-width:880px;margin:0 auto;padding:0 1.25rem}
+section{padding-top:5rem}
+h2{margin:0 0 1.6rem;font-weight:600;font-size:clamp(1.5rem,4.4vw,2.3rem);line-height:1.18;letter-spacing:-.02em}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0;padding:0;list-style:none}
+.shot{display:grid;place-items:center;aspect-ratio:16/10;border:1.5px dashed var(--line);border-radius:22px;background:var(--soft);color:var(--muted);font-size:.9rem}
+.jobs{display:flex;flex-wrap:wrap;gap:.6rem;margin:0;padding:0;list-style:none}
+.jobs li{padding:.55rem 1.15rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-weight:500}
+
+.steps{margin:0;padding:0;list-style:none;border-bottom:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:3.6rem 1fr;align-items:center;padding:1.2rem 0;border-top:1px solid var(--line);font-size:1.15rem;font-weight:500}
+.num{font-weight:600;font-size:1.5rem;color:var(--sun-text)}
+.ip{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem}
+.ip b{padding:.45rem .9rem;border-radius:12px;background:var(--soft);font-weight:600;font-size:1.05rem}
+button{padding:.55rem 1.2rem;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:700 .95rem Onest,sans-serif;cursor:pointer}
+
+footer{padding:5rem 0 4rem}
+.notice{margin:0;padding:1rem 1.25rem;background:var(--surface);border-left:4px solid var(--sun);border-radius:0 14px 14px 0}
+.help{margin:1.4rem 0;font-weight:700;color:var(--alert)}
+.soc-title{margin:2.2rem 0 .8rem;color:var(--muted)}
+.soc{display:flex;flex-wrap:wrap;gap:.6rem;margin:0;padding:0;list-style:none}
+.soc a{display:block;padding:.6rem 1.25rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-weight:700;text-decoration:none}
+.soc a:hover{border-color:var(--sun)}
+
+@media (max-width:520px){.hero{padding-top:72px}.shots{gap:.6rem}.shot{border-radius:14px}}
+@media (prefers-reduced-motion:reduce){.sun{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>NewEra</h1>
+  <p>Лучший РП-сервер Minecraft</p>
+  <a class="cta" href="#how">Как скачать</a>
+  <div class="sun"></div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Попробуй себя в новой эре</h2>
+    <ul class="shots">
+      <li class="shot">Скриншот 1</li><li class="shot">Скриншот 2</li>
+      <li class="shot">Скриншот 3</li><li class="shot">Скриншот 4</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Много профессий по вкусу</h2>
+    <ul class="jobs">
+      <li>Уборщик</li><li>Полиция</li><li>Медик</li><li>Кассир</li>
+      <li>Автобус</li><li>Такси</li><li>Машинист</li><li>Пилот</li>
+    </ul>
+  </section>
+
+  <section id="how">
+    <h2>Как скачать</h2>
+    <ol class="steps">
+      <li><span class="num">1</span>Качаем Minecraft</li>
+      <li><span class="num">2</span>Версия 1.20.1</li>
+      <li><span class="num">3</span>Любой загрузчик: Fabric или Forge</li>
+      <li><span class="num">4</span><span class="ip">IP сервера <b id="ip">mc.NewEra.me</b> <button type="button" id="copy">Копировать</button></span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p class="notice">Внимание! На серверах технические работы, ориентировочно до 2027 года.</p>
+    <p class="help">Если есть вопросы, пишите @texpodderstapingvina_bot</p>
+    <p class="soc-title">Наши соцсети</p>
+    <ul class="soc">
+      <li><a href="https://www.youtube.com/@NewEraRPOfficial" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://t.me/NewEraRP_minecraft_official" target="_blank" rel="noopener">Telegram</a></li>
+      <li><a href="https://www.tiktok.com/@newerarp_off?lang=ru-RU" target="_blank" rel="noopener">TikTok</a></li>
+    </ul>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var b=document.getElementById('copy');
+  b.addEventListener('click',function(){
+    var done=function(t){b.textContent=t;setTimeout(function(){b.textContent='Копировать'},2200)};
+    function sel(){
+      var r=document.createRange();r.selectNode(document.getElementById('ip'));
+      var s=window.getSelection();s.removeAllRanges();s.addRange(r);done('Выделено, нажми Ctrl+C');
+    }
+    try{navigator.clipboard.writeText('mc.NewEra.me').then(function(){done('Скопировано')},sel)}catch(e){sel()}
+  });
+})();
+</script>
+</body>
+</html>
